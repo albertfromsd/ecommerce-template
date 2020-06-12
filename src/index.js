@@ -12,7 +12,7 @@ import { PersistGate } from 'redux-persist/integration/react';
 import './index.css';
 
 // [ COMPONENTS ]
-import ECommerceApp from './ECommerceApp';
+import App from './App';
 
 
 
@@ -20,11 +20,11 @@ ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>
       <PersistGate persistor={persistor} >
-        <ECommerceApp />
+        <App />
       </PersistGate>
     </BrowserRouter>
   </Provider>,
-  document.getElementById('eCommerceApp')
+  document.getElementById('app')
 );
 
 serviceWorker.register();
