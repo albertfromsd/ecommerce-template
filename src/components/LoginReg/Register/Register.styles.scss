@@ -1,0 +1,15 @@
+.register {
+    display: flex;
+    flex-direction: column;
+    width: 380px;
+
+    .title {
+        margin: 10px 0;
+    }
+
+    .register-button {
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+    }
+}

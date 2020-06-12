@@ -1,0 +1,87 @@
+.contact-container {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    cursor: default;
+
+    .title-container {
+        display: inline-block;
+        border-top: 0.5px solid black;
+        border-bottom: 0.5px solid black;
+        width: 100%;
+        
+        .contact-title {
+            font-size: 30px;
+            font-weight: bold;
+            text-align: center;
+            padding: 3px;
+            margin: 3px;
+        };
+    }; // title-container
+    
+    .name-title {
+        font-size: 22px;
+        font-weight: bold;
+    };
+
+    .info-container {
+        display: flex;
+        flex-flow: row;
+        border: 0.5px solid black;
+        padding: 0 50px;
+
+        .label-container {
+            text-align: right;
+            padding-right: 15px;
+
+            .email-label, .linkedin-label, .github-label, .resume-label {
+                border-right: 0.5px solid black;
+                padding-right: 5px;
+            };
+        }; // [end] label-container
+
+        .field-container {
+            text-align: left;
+
+            .email, .linkedin, .github {
+                &:hover {
+                    font-weight: 600;
+                    cursor: pointer;
+                };
+            };
+
+            .resume {
+
+                .resume-simple-link, .resume-indepth-link {
+                    &:hover {
+                        font-weight: 600;
+                        cursor: pointer;
+                    };
+                };
+
+            };
+        }; // [end] field-container
+
+    }; // [end] info-container
+ 
+    .about-container {
+        font-size: 20px; 
+
+        .about-title {
+            text-align: center;
+            margin-bottom: -10px;
+
+        };
+
+        .about-text {
+            width: 50vw;
+            border-top: .5px solid black;
+            border-bottom: .5px solid black;
+            padding: 15px 30px;
+            font-size: 19px;
+            text-align: justify;
+        };
+    }; // [end] about-container
+
+}; // [end] contact-container

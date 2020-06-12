@@ -1,0 +1,15 @@
+.login {
+    // vs = % of view width for dynamic resizing
+    width: 380px;
+    display: flex;
+    flex-flow: column;
+
+    .title {
+        margin: 10px 0;
+    };
+
+    .buttons {
+        display: flex;
+        justify-content: space-between;
+    };
+};

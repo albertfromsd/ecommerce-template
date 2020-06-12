@@ -1,0 +1,12 @@
+.login {
+  width: 380px;
+  display: flex;
+  flex-flow: column;
+}
+.login .title {
+  margin: 10px 0;
+}
+.login .buttons {
+  display: flex;
+  justify-content: space-between;
+}

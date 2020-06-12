@@ -1,0 +1,12 @@
+export const cartActionTypes = {
+    
+    ADD_ITEM: "ADD_ITEM",
+    DELETE_ITEM: "DELETE_ITEM",
+    TOGGLE_CART_DROPDOWN: "TOGGLE_CART_DROPDOWN",
+    INC_ITEM: "INC_ITEM",
+    DEC_ITEM: "DEC_ITEM",
+    CLEAR_ITEM: "CLEAR_ITEM",
+
+    CLEAR_CART: 'CLEAR_CART',
+
+};
