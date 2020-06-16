@@ -1,13 +1,13 @@
 import React from 'react';
 
-// import { connect } from 'react-redux';
-// import { clearCart } from '../../../redux/cart/cart.actions';
+import { connect } from 'react-redux';
+import { clearCart } from '../../../redux/cart/cart.actions';
 
 import StripeCheckout from 'react-stripe-checkout';
 import axios from 'axios';
 
 
-const StripeButton = ({ price }) => {
+const StripeButton = ({ price, clearCart }) => {
 
     const priceForStripe = price * 100;
     const publishableKey = "pk_test_Hj0vVLm173cqB1IKRr4wvN3J00jRQ7cgti";
@@ -46,5 +46,8 @@ const StripeButton = ({ price }) => {
     );
 };
 
+const mapDispatchToProps = dispatch => ({
+    clearCart: () => dispatch( clearCart() )
+});
 
-export default StripeButton;
+export default connect( null, mapDispatchToProps)( StripeButton );
