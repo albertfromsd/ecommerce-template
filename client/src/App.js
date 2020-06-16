@@ -1,4 +1,4 @@
-import React, { useEffect, lazy, Suspense, Profiler } from 'react';
+import React, { useEffect, lazy, Suspense } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 
 // [ REDUX ]
@@ -38,35 +38,31 @@ const App = ({ checkUserSession, currentUser }) => {
 
 
     return (
-      <Profiler id="App" onRender={( id, phase, duration ) => {
-          console.log({ id, phase, duration }) 
-        } } > 
-      {/* Profiler gives runtime performance stats on mount and renders */}
+      <>
 
-          <GlobalStyle /> 
-          {/* GlobalStyle replaces the css styling of App.css */}
+        <GlobalStyle /> 
 
-          <Header />
+        <Header />
 
-          <Switch> 
-            <ErrorBoundary>
-            {/* Catches any errors thrown by children components and displays error message instead of spinning indefinitely */}
-              <Suspense fallback={ <Spinner /> }> 
-              {/* Displays Spinner component while any of the nested components are still loading */}
-                <Route exact path='/' component={HomePage} />
-                <Route path='/shop' component={ShopPage} />
-                <Route exact path='/contact' component={ContactPage} />
-                <Route exact path='/checkout' component={CheckoutPage} />
-                <Route exact path='/loginreg' 
-                  render={ () => currentUser 
-                    ? <Redirect to='/' />
-                    : <LoginRegPage /> 
-                  } />
-              </Suspense>
-            </ErrorBoundary>
-          </Switch>
+        <Switch> 
+          <ErrorBoundary>
+          {/* Catches any errors thrown by children components and displays error message instead of spinning indefinitely */}
+            <Suspense fallback={ <Spinner /> }> 
+            {/* Displays Spinner component while any of the nested components are still loading */}
+              <Route exact path='/' component={HomePage} />
+              <Route path='/shop' component={ShopPage} />
+              <Route exact path='/contact' component={ContactPage} />
+              <Route exact path='/checkout' component={CheckoutPage} />
+              <Route exact path='/loginreg' 
+                render={ () => currentUser 
+                  ? <Redirect to='/' />
+                  : <LoginRegPage /> 
+                } />
+            </Suspense>
+          </ErrorBoundary>
+        </Switch>
 
-      </Profiler>
+      </>
     );
 };
 
