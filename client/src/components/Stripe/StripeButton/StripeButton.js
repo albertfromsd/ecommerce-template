@@ -10,7 +10,7 @@ import axios from 'axios';
 const StripeButton = ({ price, clearCart }) => {
 
     const priceForStripe = price * 100;
-    const publishableKey = "pk_test_51Gul0eLgCAAHpg1pCA7UE9fJZzWgwyNbga8AuVG4R1wsYZEVy4NsfVzM4sSC6byFfstiXv8ln2ACKoRLBYnWqF2y00dpf0yB8G";
+    const publishableKey = "pk_test_Hj0vVLm173cqB1IKRr4wvN3J00jRQ7cgti";
 
     const onToken = token => {
         axios({
@@ -20,12 +20,14 @@ const StripeButton = ({ price, clearCart }) => {
                 amount: priceForStripe,
                 token
             }
-        }).then( res => {
+        }).then( (res) => {
             alert('Payment Successful!');
             clearCart();
-        }).catch( err => {
+            console.log( token );
+        }).catch( (err) => {
             alert( 'Unsuccessful!' );
             console.log( 'Unsuccessful payment: ', err );
+            console.log( token );
         });
     };
 
@@ -36,7 +38,7 @@ const StripeButton = ({ price, clearCart }) => {
             billingAddress
             shippingAddress
             image='https://svgshare.com/i/CUz.svg'
-            description={`your total is $${price}`}
+            description={`Your total is $${price}`}
             amount={priceForStripe}
             panelLabel='Pay Now'
             token={onToken}
