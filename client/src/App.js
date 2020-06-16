@@ -38,7 +38,7 @@ const App = ({ checkUserSession, currentUser }) => {
 
 
     return (
-      <Profiler id="ECommerceMainApp" onRender={( id, phase, duration ) => {
+      <Profiler id="App" onRender={( id, phase, duration ) => {
           console.log({ id, phase, duration }) 
         } } > 
       {/* Profiler gives runtime performance stats on mount and renders */}
