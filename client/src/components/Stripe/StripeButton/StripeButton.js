@@ -24,7 +24,7 @@ const StripeButton = ({ price, clearCart }) => {
             alert('Payment Successful!');
             clearCart();
         }).catch( err => {
-            alert( 'Unsuccessful payment. Please use provided credit card information' );
+            alert( 'Unsuccessful!' );
             console.log( 'Unsuccessful payment: ', err );
         });
     };
