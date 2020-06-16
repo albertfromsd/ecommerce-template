@@ -22,6 +22,7 @@ const StripeButton = ({ price, clearCart }) => {
             }
         }).then( (res) => {
             alert('Payment Successful!');
+            clearCart();
             console.log( token );
         }).catch( (err) => {
             alert( 'Unsuccessful!' );
