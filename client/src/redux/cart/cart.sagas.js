@@ -14,7 +14,7 @@ export function* onLogoutSuccess() {
         clearCartOnLogout
     );
 };
-
+ 
 export function* cartSagas() {
     yield( all([
         call( onLogoutSuccess ),

@@ -12,7 +12,7 @@ import './CartDropDown.styles.scss';
 
 // [ COMPONENTS ]
 import CustomButton from '../../CustomButton/CustomButton';
-import CartItem from '../../Cart/CartItem/CartItem';
+import CartItem from '../CartItem/CartItem';
 
 
 const CartDropDown = ({ items, history, dispatch }) => {
