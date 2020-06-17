@@ -23,11 +23,9 @@ const StripeButton = ({ price, clearCart }) => {
         }).then( (res) => {
             alert('Payment Successful!');
             clearCart();
-            console.log( token );
         }).catch( (err) => {
             alert( 'Unsuccessful!' );
             console.log( 'Unsuccessful payment: ', err );
-            console.log( token );
         });
     };
 
@@ -51,4 +49,4 @@ const mapDispatchToProps = dispatch => ({
     clearCart: () => dispatch( clearCart() )
 });
 
-export default connect( null, mapDispatchToProps)( StripeButton );
+export default connect( null, mapDispatchToProps )( StripeButton );
