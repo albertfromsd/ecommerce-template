@@ -40,13 +40,25 @@ const Login = ({ googleLoginStart, emailLoginStart }) => {
             <span> Login with your e-mail and password below </span>
 
             <form onSubmit={handleSubmit}>
-                <FormInput name="email" value={email} handleOnChange={handleOnChange} label='E-mail' required />
-                <FormInput name="password" value={password} type="password" handleOnChange={handleOnChange} label='Password' required />
+                <FormInput 
+                    label='E-mail' 
+                    name="email" 
+                    value={email} 
+                    handleOnChange={handleOnChange} 
+                    required />
+                <FormInput 
+                    label='Password' 
+                    name="password" 
+                    value={password} 
+                    type="password" 
+                    handleOnChange={handleOnChange} 
+                    required />
 
-                <div className='buttons'>
-                    <CustomButton type="submit"> 
-                        Login </CustomButton>
-                    <CustomButton type='button' onClick={googleLoginStart} isGoogleSignIn> 
+                <div className='buttons-bar'>
+                    <CustomButton type="submit"> Login </CustomButton>
+                    <CustomButton type='button' 
+                        onClick={googleLoginStart} 
+                        isGoogleLogin > 
                         Login with Google </CustomButton>
                 </div>
                 

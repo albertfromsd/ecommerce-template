@@ -6,7 +6,7 @@
 .login .title {
   margin: 10px 0;
 }
-.login .buttons {
+.login .buttons-bar {
   display: flex;
   justify-content: space-between;
 }
