@@ -13,21 +13,23 @@ const userReducer = ( state=INITIAL_STATE, action ) => {
                 currentUser: action.data,
                 errorMsg: null
             };
+
         case UserActionTypes.USER_LOGOUT_SUCCESS:
             return {
                 ...state,
                 currentUser: null,
                 errorMsg: null
             };
+
         // stacking cases will result in either of them triggering the equivalent return
-        case UserActionTypes.REGISTER_FAIL:
         case UserActionTypes.LOGIN_FAIL:
+        case UserActionTypes.REGISTER_FAIL:
         case UserActionTypes.USER_LOGOUT_FAIL:
             return {
                 ...state, 
                 errorMsg: action.data
             };
-
+            
         default:
             return state;
     };

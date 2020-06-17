@@ -32,7 +32,7 @@ const ContactPage = lazy( () =>
 const App = ({ checkUserSession, currentUser }) => {
   
   useEffect( () => {
-    checkUserSession(); // checks to see if a user is currently logged in
+    checkUserSession();
 
   }, [ checkUserSession ]);
 
@@ -46,9 +46,7 @@ const App = ({ checkUserSession, currentUser }) => {
 
         <Switch> 
           <ErrorBoundary>
-          {/* Catches any errors thrown by children components and displays error message instead of spinning indefinitely */}
             <Suspense fallback={ <Spinner /> }> 
-            {/* Displays Spinner component while any of the nested components are still loading */}
               <Route exact path='/' component={HomePage} />
               <Route path='/shop' component={ShopPage} />
               <Route exact path='/contact' component={ContactPage} />
