@@ -25,5 +25,5 @@ export const toggleCartDropDown = () => ({
 });
 
 export const clearCart = () => ({
-    type: cartActionTypes.CLEAR_CART,
+    type: cartActionTypes.CLEAR_CART
 });
