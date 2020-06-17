@@ -25,11 +25,6 @@
 * ( LightHouse Test ): test gave a performance rating of 23%. Why???
  
 
-
-
-
-
-
 **[ 2020-06-09 ]** ( React Lazy / Dynamic Imports / Code Splitting / Error Boundary )
 - Looking into splitting code chunk download for a typical client on an deployed site
 - Instead of client being forced to download entire code, they will only have to download the portions that are using at that time, while being cached in local memory as the sections of the site are being used
