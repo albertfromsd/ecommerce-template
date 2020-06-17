@@ -18,7 +18,7 @@ import ErrorBoundary from '../../components/ErrorBoundary/ErrorBoundary';
 const CollectionsOverview = lazy( () => 
     import('../../components/Collections/CollectionsOverview/CollectionsOverview') );
 const CollectionPage = lazy( () => 
-    import('../CollectionPage/CollectionPage.js') );
+    import('../CollectionPage/CollectionPage') );
 
 
 
